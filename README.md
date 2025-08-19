@@ -1,5 +1,5 @@
 My solution/attempt at the 17th project from the "Big Book Of Small Python Projects".
-I used the blessed library for visuals, used sounds for the first time but there is no timer or point system.
+I used the blessed library for visuals, used sounds for the first time, and added all the features I wanted!
 
 How to use:
   1. Install blessed library https://pypi.org/project/blessed/
