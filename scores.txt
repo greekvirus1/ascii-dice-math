@@ -1,0 +1,5 @@
+(71, 'Lee best player?')
+(66, 'Emilia')
+(22, 'Lee bad')
+(10, 'Frankie')
+(0, 'bDuck')
