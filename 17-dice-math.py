@@ -7,7 +7,7 @@ from pathlib import Path
 DIE_MIN: int = 2 #Minimum dice
 DIE_MAX: int = 5 #Maximum dice (If set too high in relation to board size program will hang or be very slow)
 TERM_SIZE: tuple = (101, 50) #(Width, Height)
-TIME_LIMIT: float = 1.0 
+TIME_LIMIT: float = 60.0 
 POINT_REWARD: int = 5 #Correct answer reward
 POINT_PENALTY: int = 2 #Points lost when giving wrong answer
 POINT_COMBO_REWARD: int = 7 #How many points are awarded every combo
@@ -324,4 +324,5 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
+
         print("BOOP")
