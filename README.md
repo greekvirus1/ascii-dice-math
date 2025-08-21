@@ -3,6 +3,6 @@ I used the blessed library for visuals, used sounds for the first time, and adde
 
 How to use:
   1. Install blessed library https://pypi.org/project/blessed/
-  2. Download the .7z file from latest release https://github.com/greekvirus1/ascii-dice-math/releases/tag/v1.0.0https://github.com/greekvirus1/ascii-dice-math/releases/tag/v1.0.0
+  2. Download the .7z file from latest release (https://github.com/greekvirus1/ascii-dice-math/releases/tag/v1.0.1)
   3. Unzip folder somewhere
   4. Run 17-dice-math.py with Python through the terminal!
