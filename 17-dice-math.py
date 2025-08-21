@@ -109,7 +109,7 @@ def bubblesortDiceMath(arr : list) -> list[str]:
         return arr
 
     #make list sortable
-    arrCopy = arr.copy()
+    arrCopy = arr[:-1].copy()
     k = 0
     for string in arrCopy:
         m = string.find(",")
@@ -117,7 +117,7 @@ def bubblesortDiceMath(arr : list) -> list[str]:
         k += 1
 
 
-    j = len(arr) - 1
+    j = len(arr) - 2
 
     while j > 0:
         for i in range(j):
@@ -138,8 +138,7 @@ def saveScore(scoreToSave : int) -> None:
     #Read/Create file if none exists
     writeThis = (scoreToSave, name)
     with open(scoreFileLocation, "a") as f:
-        f.write("\n")
-        f.write(str(writeThis))
+        f.write(str(writeThis) + "\n")
     #Scores are stored as such: (score, 'name')
     with open(scoreFileLocation) as f:
         for line in f:
@@ -190,7 +189,7 @@ def main():
             #Only need up to 20 scores
             with open(scoreFileLocation) as f:
                 for line in f:
-                    if len(scoreList) > 20:
+                    if len(scoreList[:-1]) > 20:
                         break
                     scoreList.append(line)
             for i in range(len(scoreList)):
@@ -199,10 +198,7 @@ def main():
                 name = scoreList[i]
                 m = name.find(",")
                 #Last name on score board doesn't contain \n
-                if i+1 == len(scoreList):
-                    name = name[m+3:-2]
-                else:
-                    name = name[m+3:-3]
+                name = name[m+3:-3]
                 #Check if name is too long
                 if len(position) + len(name) > 21:
                     name = name[:21-len(position)]
@@ -324,5 +320,4 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-
         print("BOOP")
